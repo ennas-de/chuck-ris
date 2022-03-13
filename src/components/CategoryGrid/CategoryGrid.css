@@ -1,0 +1,31 @@
+.categoryGrid__cards {
+    margin: 1.5rem auto;
+    padding: 1.5rem;
+    max-width: 1180px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+    font-family: sans-serif;
+}
+
+.categoryGrid__card { 
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+.categoryGrid__card__info {
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #555555;
+    background-color: #eeeeee;
+    font-size: 0.8rem;
+    border-bottom: 2px solid #cccccc;
+    text-transform: uppercase;
+    text-align: center;
+
+}
+
+#hr {
+    opacity: 0.2;
+  }
