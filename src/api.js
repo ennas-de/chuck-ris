@@ -11,4 +11,4 @@ export const RANDOM_URL = `${API_URL}random`;
 
 export const ALL_CATEGORIES_URL = `${API_URL}categories`;
 
-export const SEARCH_CATEGORY_URL = `https://api.chucknorris.io/`;
+export const SEARCH_CATEGORY_URL = `https://api.chucknorris.io/jokes/`;
