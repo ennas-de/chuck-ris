@@ -43,7 +43,7 @@ const index = () => {
                             </div>
                             <div className="jokesGrid__card__info">
                                 <div>
-                                    <Link to={`${joke.id}`} className="jokesGrid__card__link" > See Stats </Link>
+                                    <Link to={`/${joke.id}`} className="jokesGrid__card__link" > See Stats </Link>
                                 </div>
                             </div>
                         </div>
