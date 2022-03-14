@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ALL_CATEGORIES_URL, SEARCH_CATEGORY_URL } from '../../api';
-import './CategoryGrid.css'
+import './CategoryGrid.css';
+import Spinner from '../Spinner';
 
 const index = () => {
     const [categories, setCategories] = useState([]);
@@ -18,17 +19,7 @@ const index = () => {
     useEffect(() => {
         fetchCategories();
     }, []);
-    
-    const fetchCategory = async () => {
-        const response = await fetch (`${SEARCH_CATEGORY_URL}`);
-        const data = await response.json();
-        console.log(data.path)
-        setCategoryUrl(data.path)
-    }
-
-    useEffect(() => {
-        fetchCategory();
-    }, [])
+   
 
   return (
       <>
@@ -38,7 +29,7 @@ const index = () => {
                     <div className="categoryGrid__card">
                         <div className="categoryGrid__card__info">
                             <div>
-                                <Link to={`/${categoryUrl}random?category=${category}`} >
+                                <Link to={`random?category=${category}`} key={category}>
                                     {category}
                                 </Link>
                             </div>
@@ -46,57 +37,13 @@ const index = () => {
                     </div>
 
                 ))}
-                {/* <div className="categoryGrid__card">
-                    <div className="categoryGrid__card__info">
-                        <div>
-                            ANIMAL
-                        </div>
-                    </div>
-                </div>
-                <div className="categoryGrid__card">
-                    <div className="categoryGrid__card__info">
-                        <div>
-                            ANIMAL
-                        </div>
-                    </div>
-                </div>
-                <div className="categoryGrid__card">
-                    <div className="categoryGrid__card__info">
-                        <div>
-                            ANIMAL
-                        </div>
-                    </div>
-                </div>
-                <div className="categoryGrid__card">
-                    <div className="categoryGrid__card__info">
-                        <div>
-                            ANIMAL
-                        </div>
-                    </div>
-                </div>
-                <div className="categoryGrid__card">
-                    <div className="categoryGrid__card__info">
-                        <div>
-                            ANIMAL
-                        </div>
-                    </div>
-                </div>
-                <div className="categoryGrid__card">
-                    <div className="categoryGrid__card__info">
-                        <div>
-                            ANIMAL
-                        </div>
-                    </div>
-                </div> */}
-                
-                {/* <hr id="hr" /> */}
             </div>
         ) : (
             <div className="categoryGrid__cards">
                 <div className="categoryGrid__card">
                     <div className="categoryGrid__card__info">
                         <div>
-                            ANIMAL
+                            <Spinner />
                         </div>
                     </div>
                 </div>
