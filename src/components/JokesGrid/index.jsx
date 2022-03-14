@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './JokesGrid.css';
-import { ALL_JOKES_URL } from "../../api"; 
+import API_URL, { ALL_JOKES_URL } from "../../api"; 
 
 const index = () => {
     const [jokes, setJokes] = useState([]);
@@ -43,7 +43,7 @@ const index = () => {
                             </div>
                             <div className="jokesGrid__card__info">
                                 <div>
-                                    <Link to={`${joke.id}`} className="jokesGrid__card__link" > See Stats </Link>
+                                    <Link to={`/${joke.id}`} className="jokesGrid__card__link" > See Stats </Link>
                                 </div>
                             </div>
                         </div>

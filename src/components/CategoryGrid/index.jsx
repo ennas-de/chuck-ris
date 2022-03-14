@@ -38,7 +38,7 @@ const index = () => {
                     <div className="categoryGrid__card">
                         <div className="categoryGrid__card__info">
                             <div>
-                                <Link to={`${categoryUrl}random?category=${category}`} >
+                                <Link to={`/${categoryUrl}random?category=${category}`} >
                                     {category}
                                 </Link>
                             </div>
@@ -46,50 +46,7 @@ const index = () => {
                     </div>
 
                 ))}
-                {/* <div className="categoryGrid__card">
-                    <div className="categoryGrid__card__info">
-                        <div>
-                            ANIMAL
-                        </div>
-                    </div>
-                </div>
-                <div className="categoryGrid__card">
-                    <div className="categoryGrid__card__info">
-                        <div>
-                            ANIMAL
-                        </div>
-                    </div>
-                </div>
-                <div className="categoryGrid__card">
-                    <div className="categoryGrid__card__info">
-                        <div>
-                            ANIMAL
-                        </div>
-                    </div>
-                </div>
-                <div className="categoryGrid__card">
-                    <div className="categoryGrid__card__info">
-                        <div>
-                            ANIMAL
-                        </div>
-                    </div>
-                </div>
-                <div className="categoryGrid__card">
-                    <div className="categoryGrid__card__info">
-                        <div>
-                            ANIMAL
-                        </div>
-                    </div>
-                </div>
-                <div className="categoryGrid__card">
-                    <div className="categoryGrid__card__info">
-                        <div>
-                            ANIMAL
-                        </div>
-                    </div>
-                </div> */}
                 
-                {/* <hr id="hr" /> */}
             </div>
         ) : (
             <div className="categoryGrid__cards">
